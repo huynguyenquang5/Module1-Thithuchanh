@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="sumOfListPrime()">
+</body>
+<script>
+  function sumOfListPrime(x) {
+      x = +prompt("Nhập một số bất kì:");
+      let countMath = 0;
+      let countNum = 0;
+      let total = 0;
+      for (let n = 2; n <= x; n++) {
+          for (let i = 1; i <= n; i++) {
+              if (n % i === 0) {
+                  countMath++;
+              }
+          }
+          if (countMath === 2) {
+              document.write(n + " ");
+              total += n;
+              countNum++;
+          }
+          countMath = 0;
+      }
+      document.write("<br>" + "Tổng các số nguyên tố: " + total)
+  }
+</script>
+</html>

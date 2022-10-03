@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="findAvg()">
+</body>
+<script>
+  function findAvg(){
+    let arrPoints = [];
+    let total = 0;
+    let arrLength = +prompt("Nhập số lượng điểm bạn muốn tính: ")
+    for (let i=0;i<arrLength;i++){
+      let point = +prompt("Nhập điểm số " + (i + 1));
+      arrPoints.push(point)
+      total += point;
+    }
+    document.write("Số lượng điểm: " + arrLength + "<br>");
+    document.write("Mảng điểm: " + arrPoints.join(" ") + "<br>");
+    document.write("Điểm trung bình của danh sách điểm thi: " + total / arrLength + "<br>")
+  }
+</script>
+</html>

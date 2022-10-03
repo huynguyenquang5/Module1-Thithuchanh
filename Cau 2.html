@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="insertNumberToArray()">
+</body>
+<script>
+  function insertNumberToArray(x,xIndex) {
+    let arrNumbers = [];
+    let arrLength = +prompt("Enter array length: ");
+      for (let i=0;i<arrLength;i++) {
+          let number = +prompt("Enter number " + + (i + 1) + " into array");
+          arrNumbers.push(number)
+      }
+      x = +prompt("Enter number x:")
+      xIndex = +prompt("Enter x index:")
+      if (xIndex < 0 || xIndex > arrLength) {
+          document.write("Array: " + arrNumbers.join(" "))
+      } else {
+          document.write("Array before: " + arrNumbers.join(" ") + "<br>")
+          arrNumbers.splice(xIndex,1,x)
+          document.write("Array after add x: " + arrNumbers.join(" "))
+      }
+  }
+</script>
+</html>

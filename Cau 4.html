@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="640px" height="480px"  style="border:10px solid #d3d3d3"></canvas>
+<br>
+</body>
+<script>
+    class Rectangle {
+        length;
+        width;
+        coordinateX;
+        coordinateY;
+        constructor(length,width,coordinateX,coordinateY) {
+            this.length = length;
+            this.width = width;
+            this.coordinateX = coordinateX;
+            this.coordinateY = coordinateY;
+        }
+        getLength(){
+            return this.length;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getCoordinateX(){
+            return this.coordinateX;
+        }
+        getCoordinateY(){
+            return this.coordinateY;
+        }
+    }
+    let rectangle = new Rectangle(500,200,50,50);
+    function rectangleRender() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.fillStyle = "#9a9fc6";
+        ctx.fillRect(rectangle.coordinateX,rectangle.coordinateY,rectangle.length,rectangle.width);
+    }
+
+    let width = rectangle.getWidth();
+    let length = rectangle.getLength();
+    let coordinateX = rectangle.getCoordinateX();
+    let coordinateY = rectangle.getCoordinateY();
+    rectangleRender();
+    document.write("Width: " + width + "<br>");
+    document.write("Length: " + length + "<br>");
+    document.write("Coordinate X: " + coordinateX + "<br>");
+    document.write("Coordinate Y: " + coordinateY + "<br>");
+
+
+</script>
+</html>
